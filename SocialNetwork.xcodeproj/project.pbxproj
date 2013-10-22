@@ -14,13 +14,15 @@
 		CFC6A3F118162CB70084FC24 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A3F018162CB70084FC24 /* main.m */; };
 		CFC6A3F518162CB70084FC24 /* CSGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A3F418162CB70084FC24 /* CSGAppDelegate.m */; };
 		CFC6A3F818162CB70084FC24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFC6A3F618162CB70084FC24 /* Main.storyboard */; };
-		CFC6A3FB18162CB70084FC24 /* CSGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A3FA18162CB70084FC24 /* CSGViewController.m */; };
 		CFC6A3FD18162CB70084FC24 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFC6A3FC18162CB70084FC24 /* Images.xcassets */; };
 		CFC6A40418162CB70084FC24 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A40318162CB70084FC24 /* XCTest.framework */; };
 		CFC6A40518162CB70084FC24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E418162CB70084FC24 /* Foundation.framework */; };
 		CFC6A40618162CB70084FC24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E818162CB70084FC24 /* UIKit.framework */; };
 		CFC6A40E18162CB70084FC24 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFC6A40C18162CB70084FC24 /* InfoPlist.strings */; };
 		CFC6A41018162CB70084FC24 /* SocialNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A40F18162CB70084FC24 /* SocialNetworkTests.m */; };
+		CFC6A41B18162DDD0084FC24 /* PostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A41A18162DDD0084FC24 /* PostModel.m */; };
+		CFC6A42118162FC50084FC24 /* PostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A42018162FC50084FC24 /* PostTableViewCell.m */; };
+		CFC6A42418162FEA0084FC24 /* PostTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC6A42318162FEA0084FC24 /* PostTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,18 @@
 		CFC6A3F318162CB70084FC24 /* CSGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGAppDelegate.h; sourceTree = "<group>"; };
 		CFC6A3F418162CB70084FC24 /* CSGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGAppDelegate.m; sourceTree = "<group>"; };
 		CFC6A3F718162CB70084FC24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CFC6A3F918162CB70084FC24 /* CSGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSGViewController.h; sourceTree = "<group>"; };
-		CFC6A3FA18162CB70084FC24 /* CSGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSGViewController.m; sourceTree = "<group>"; };
 		CFC6A3FC18162CB70084FC24 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CFC6A40218162CB70084FC24 /* SocialNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC6A40318162CB70084FC24 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CFC6A40B18162CB70084FC24 /* SocialNetworkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SocialNetworkTests-Info.plist"; sourceTree = "<group>"; };
 		CFC6A40D18162CB70084FC24 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFC6A40F18162CB70084FC24 /* SocialNetworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialNetworkTests.m; sourceTree = "<group>"; };
+		CFC6A41918162DDD0084FC24 /* PostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostModel.h; sourceTree = "<group>"; };
+		CFC6A41A18162DDD0084FC24 /* PostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostModel.m; sourceTree = "<group>"; };
+		CFC6A41F18162FC50084FC24 /* PostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableViewCell.h; sourceTree = "<group>"; };
+		CFC6A42018162FC50084FC24 /* PostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTableViewCell.m; sourceTree = "<group>"; };
+		CFC6A42218162FEA0084FC24 /* PostTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PostTableViewController.h; sourceTree = "<group>"; };
+		CFC6A42318162FEA0084FC24 /* PostTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PostTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 		CFC6A3D818162CB70084FC24 = {
 			isa = PBXGroup;
 			children = (
+				CFC6A41F18162FC50084FC24 /* PostTableViewCell.h */,
+				CFC6A42018162FC50084FC24 /* PostTableViewCell.m */,
+				CFC6A42218162FEA0084FC24 /* PostTableViewController.h */,
+				CFC6A42318162FEA0084FC24 /* PostTableViewController.m */,
 				CFC6A3EA18162CB70084FC24 /* SocialNetwork */,
 				CFC6A40918162CB70084FC24 /* SocialNetworkTests */,
 				CFC6A3E318162CB70084FC24 /* Frameworks */,
@@ -115,8 +125,8 @@
 				CFC6A3F318162CB70084FC24 /* CSGAppDelegate.h */,
 				CFC6A3F418162CB70084FC24 /* CSGAppDelegate.m */,
 				CFC6A3F618162CB70084FC24 /* Main.storyboard */,
-				CFC6A3F918162CB70084FC24 /* CSGViewController.h */,
-				CFC6A3FA18162CB70084FC24 /* CSGViewController.m */,
+				CFC6A41918162DDD0084FC24 /* PostModel.h */,
+				CFC6A41A18162DDD0084FC24 /* PostModel.m */,
 				CFC6A3FC18162CB70084FC24 /* Images.xcassets */,
 				CFC6A3EB18162CB70084FC24 /* Supporting Files */,
 			);
@@ -251,8 +261,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFC6A3F518162CB70084FC24 /* CSGAppDelegate.m in Sources */,
-				CFC6A3FB18162CB70084FC24 /* CSGViewController.m in Sources */,
+				CFC6A41B18162DDD0084FC24 /* PostModel.m in Sources */,
 				CFC6A3F118162CB70084FC24 /* main.m in Sources */,
+				CFC6A42418162FEA0084FC24 /* PostTableViewController.m in Sources */,
+				CFC6A42118162FC50084FC24 /* PostTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
