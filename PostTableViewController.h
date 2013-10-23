@@ -13,4 +13,6 @@
 
 @property (nonatomic) NSMutableArray *posts;
 
+@property (nonatomic, weak) IBOutlet UIButton *myButton;
+
 @end

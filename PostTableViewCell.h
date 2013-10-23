@@ -9,8 +9,20 @@
 #import <UIKit/UIKit.h>
 #import "PostModel.h"
 
-@interface PostTableViewCell : UITableViewCell
+@interface PostTableViewCell : UITableViewCell {
+    PostModel *post;
+    
+    UILabel *userName;
+    UILabel *title;
+    UILabel *content;
+    UILabel *timeStamp;
+}
 
-@property (nonatomic) NSMutableArray *post;
+@property (nonatomic) PostModel *post;
+
+@property (nonatomic) UILabel *userName;
+@property (nonatomic) UILabel *title;
+@property (nonatomic) UILabel *content;
+@property (nonatomic) UILabel *timeStamp;
 
 @end

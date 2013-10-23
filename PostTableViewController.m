@@ -68,9 +68,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     cell.textLabel.text = [_posts[indexPath.row] userName];
-    cell.textLabel.text = [_posts[indexPath.row] title];
-    cell.textLabel.text = [_posts[indexPath.row] content];
-  //  cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
+    cell.detailTextLabel.text = [_posts[indexPath.row] title];
+  //  cell.textLabel.text = [_posts[indexPath.row] content];
+   // cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
                                  
     
     return cell;

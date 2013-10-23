@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PostModel : NSObject
+@interface PostModel : NSObject {
+    
+}
 
 @property (nonatomic) NSString *userName;
 @property (nonatomic) NSString *title;
