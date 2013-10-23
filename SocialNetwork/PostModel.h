@@ -10,4 +10,9 @@
 
 @interface PostModel : NSObject
 
+@property (nonatomic) NSString *userName;
+@property (nonatomic) NSString *title;
+@property (nonatomic) NSString *content;
+@property (nonatomic) NSDate *timeStamp;
+
 @end

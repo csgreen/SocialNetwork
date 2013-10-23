@@ -27,6 +27,12 @@
 {
     [super viewDidLoad];
 
+    PostModel *post = [[PostModel alloc] init];
+    post.userName   = @"Christina";
+    post.title = @"Day 1";
+    post.content = @"It was an amazing day and I learned a ton.";
+    post.timeStamp = 10/23/2013;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -44,16 +50,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return _posts.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +67,11 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.textLabel.text = [_posts[indexPath.row] userName];
+    cell.textLabel.text = [_posts[indexPath.row] title];
+    cell.textLabel.text = [_posts[indexPath.row] content];
+  //  cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
+                                 
     
     return cell;
 }

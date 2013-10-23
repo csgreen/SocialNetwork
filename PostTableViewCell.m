@@ -8,6 +8,8 @@
 
 #import "PostTableViewCell.h"
 
+// @end
+
 @implementation PostTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

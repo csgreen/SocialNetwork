@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostModel.h"
 
 @interface PostTableViewController : UITableViewController
+
+@property (nonatomic) NSMutableArray *posts;
 
 @end
