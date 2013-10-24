@@ -33,6 +33,8 @@
     post.content = @"It was an amazing day and I learned a ton.";
     post.timeStamp = 10/23/2013;
     
+    _posts = [NSMutableArray arrayWithObjects: post, nil];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -67,10 +69,10 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    cell.textLabel.text = [_posts[indexPath.row] userName];
+   cell.textLabel.text = [_posts[indexPath.row] userName];
     cell.detailTextLabel.text = [_posts[indexPath.row] title];
-  //  cell.textLabel.text = [_posts[indexPath.row] content];
-   // cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
+  // cell.textLabel.text = [_posts[indexPath.row] content];
+  // cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
                                  
     
     return cell;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PostModel.h"
+#import "SocialNetwork/PostModel.h"
 
 @interface PostTableViewCell : UITableViewCell {
     PostModel *post;
