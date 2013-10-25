@@ -33,61 +33,61 @@
     post.userName   = @"Christina";
     post.title = @"Day 1";
     post.content = @"It was an amazing day and I learned a ton.";
-    post.timeStamp = 10/2/2013;
+    post.timeStamp = [NSDate date];
     
     PostModel *post1 = [[PostModel alloc] init];
     post1.userName   = @"Christina";
     post1.title = @"Day 2";
     post1.content = @"I ate too much candy.";
-    post1.timeStamp = 10/3/2013;
+    post1.timeStamp = [NSDate date];
     
     PostModel *post2 = [[PostModel alloc] init];
     post2.userName   = @"Christina";
     post2.title = @"Day 3";
     post2.content = @"I had to run home because I forgot my book.";
-    post2.timeStamp = 10/4/2013;
+    post2.timeStamp = [NSDate date];
     
     PostModel *post3 = [[PostModel alloc] init];
     post3.userName   = @"Christina";
     post3.title = @"Day 4";
     post3.content = @"We had a party!";
-    post3.timeStamp = 10/5/2013;
+    post3.timeStamp = [NSDate date];
     
     PostModel *post4 = [[PostModel alloc] init];
     post4.userName   = @"Christina";
     post4.title = @"Day 5";
     post4.content = @"It rained today.";
-    post4.timeStamp = 10/6/2013;
+    post4.timeStamp = [NSDate date];
     
     PostModel *post5 = [[PostModel alloc] init];
     post5.userName   = @"Christina";
     post5.title = @"Day 6";
     post5.content = @"Best. Snacks. Ever.";
-    post5.timeStamp = 10/7/2013;
+    post5.timeStamp = [NSDate date];
     
     PostModel *post6 = [[PostModel alloc] init];
     post6.userName   = @"Christina";
     post6.title = @"Day 7";
     post6.content = @"Code broke, then fixed. Phew.";
-    post6.timeStamp = 10/8/2013;
+    post6.timeStamp = [NSDate date];
     
     PostModel *post7 = [[PostModel alloc] init];
     post7.userName   = @"Christina";
     post7.title = @"Day 8";
     post7.content = @"Home stretch!";
-    post7.timeStamp = 10/9/2013;
+    post7.timeStamp = [NSDate date];
     
     PostModel *post8 = [[PostModel alloc] init];
     post8.userName   = @"Christina";
     post8.title = @"Day 9";
     post8.content = @"Wore my favorite scarf today.";
-    post8.timeStamp = 10/10/2013;
+    post8.timeStamp = [NSDate date];
     
     PostModel *post9 = [[PostModel alloc] init];
     post9.userName   = @"Christina";
     post9.title = @"Day 10";
     post9.content = @"Final project - done!";
-    post9.timeStamp = 10/11/2013;
+    post9.timeStamp = [NSDate date];
     
     _posts = [NSMutableArray arrayWithObjects: post, post1, post2, post3, post4, post5, post6, post7, post8, post9, nil];
     
@@ -135,10 +135,10 @@
     
     
     
-  cell.textLabel.text = [_posts[indexPath.row] userName];
-    cell.detailTextLabel.text = [_posts[indexPath.row] title];
-   //cell.contentTextLabel.text = [_posts[indexPath.row] content];
-  // cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
+    cell.userName.text = [_posts[indexPath.row] userName];
+    cell.title.text = [_posts[indexPath.row] title];
+    cell.content.text = [_posts[indexPath.row] content];
+    cell.timeStamp.text = dateString;
     
     
     
