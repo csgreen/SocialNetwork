@@ -10,20 +10,13 @@
 #import "PostModel.h"
 
 
-@interface PostTableViewCell : UITableViewCell {
-    PostModel *post;
-    
-    UILabel *userName;
-    UILabel *title;
-    UILabel *content;
-    UILabel *timeStamp;
-}
+@interface PostTableViewCell : UITableViewCell
 
-@property (nonatomic) PostModel *post;
+@property (nonatomic, strong) PostModel *post;
 
-@property (nonatomic) UILabel *userName;
-@property (nonatomic) UILabel *title;
-@property (nonatomic) UILabel *content;
-@property (nonatomic) UILabel *timeStamp;
+@property (nonatomic, strong) IBOutlet UILabel *userName;
+@property (nonatomic) IBOutlet UILabel *title;
+@property (nonatomic) IBOutlet UILabel *content;
+@property (nonatomic) IBOutlet UILabel *timeStamp;
 
 @end
