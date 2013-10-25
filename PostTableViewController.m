@@ -122,14 +122,25 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
+    
+    
     static NSString *reuseIdentifier = @"Cell";
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-  // cell.textLabel.text = [_posts[indexPath.row] userName];
+    NSDate *postDate = [_posts[indexPath.row] timeStamp];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateStyle:NSDateFormatterShortStyle];
+    NSString *dateString = [dateFormat stringFromDate:postDate];
+    
+    
+    
+  cell.textLabel.text = [_posts[indexPath.row] userName];
     cell.detailTextLabel.text = [_posts[indexPath.row] title];
    //cell.contentTextLabel.text = [_posts[indexPath.row] content];
   // cell.detailTextLabel.text = [[[_posts[indexPath.row] timeStamp] stringValue];
-                                 
+    
+    
     
     return cell;
 }

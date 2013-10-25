@@ -9,10 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "PostModel.h"
 
-// adding new code
-
-
-//end new code
 
 @interface PostTableViewCell : UITableViewCell {
     PostModel *post;
