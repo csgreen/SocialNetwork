@@ -44,6 +44,20 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-oL-rJF">
+                                            <rect key="frame" x="261" y="4" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SnD-ye-8eN">
+                                            <rect key="frame" x="261" y="42" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -67,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="-122" y="7"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Post Form View Controller-->
         <scene sceneID="hNa-T4-J9Z">
             <objects>
-                <viewController id="BRc-HJ-ki8" sceneMemberID="viewController">
+                <viewController id="BRc-HJ-ki8" customClass="AddPostFormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IyE-QS-Cs5"/>
                         <viewControllerLayoutGuide type="bottom" id="7Lj-NI-HSk"/>

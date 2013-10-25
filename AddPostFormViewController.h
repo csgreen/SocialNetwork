@@ -10,4 +10,11 @@
 
 @interface AddPostFormViewController : UIViewController
 
+
+// - (IBAction)closeModal:(UIButton *)sender {
+   // [self dissmissViewControllerAnimated:YES completion:^{
+     //   NSLog(@“Modal Dismissed”);
+   // }];
+// }
+
 @end
