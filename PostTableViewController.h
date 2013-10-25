@@ -10,10 +10,10 @@
 #import "PostModel.h"
 #import "PostTableViewCell.h"
 
-@interface PostTableViewController : UITableViewController
+@interface PostTableViewController : UITableViewController <UITableViewDataSource>
 
 @property (nonatomic) NSMutableArray *posts;
 
-@property (nonatomic, weak) IBOutlet UIButton *myButton;
+//@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
