@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF99D9071819F1E300B691A5 /* AddPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D9061819F1E300B691A5 /* AddPostFormViewController.m */; };
+		CF99D951181F117A00B691A5 /* EditPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D950181F117A00B691A5 /* EditPostViewController.m */; };
 		CFC6A3E518162CB70084FC24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E418162CB70084FC24 /* Foundation.framework */; };
 		CFC6A3E718162CB70084FC24 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E618162CB70084FC24 /* CoreGraphics.framework */; };
 		CFC6A3E918162CB70084FC24 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E818162CB70084FC24 /* UIKit.framework */; };
@@ -39,6 +40,8 @@
 /* Begin PBXFileReference section */
 		CF99D9051819F1E300B691A5 /* AddPostFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostFormViewController.h; sourceTree = "<group>"; };
 		CF99D9061819F1E300B691A5 /* AddPostFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostFormViewController.m; sourceTree = "<group>"; };
+		CF99D94F181F117A00B691A5 /* EditPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPostViewController.h; sourceTree = "<group>"; };
+		CF99D950181F117A00B691A5 /* EditPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPostViewController.m; sourceTree = "<group>"; };
 		CFC6A3E118162CB70084FC24 /* SocialNetwork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialNetwork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFC6A3E418162CB70084FC24 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CFC6A3E618162CB70084FC24 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +133,8 @@
 				CFC6A3F318162CB70084FC24 /* CSGAppDelegate.h */,
 				CFC6A3F418162CB70084FC24 /* CSGAppDelegate.m */,
 				CFC6A3F618162CB70084FC24 /* Main.storyboard */,
+				CF99D94F181F117A00B691A5 /* EditPostViewController.h */,
+				CF99D950181F117A00B691A5 /* EditPostViewController.m */,
 				CFC6A41918162DDD0084FC24 /* PostModel.h */,
 				CFC6A41A18162DDD0084FC24 /* PostModel.m */,
 				CFC6A3FC18162CB70084FC24 /* Images.xcassets */,
@@ -265,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF99D951181F117A00B691A5 /* EditPostViewController.m in Sources */,
 				CFC6A3F518162CB70084FC24 /* CSGAppDelegate.m in Sources */,
 				CFC6A41B18162DDD0084FC24 /* PostModel.m in Sources */,
 				CF99D9071819F1E300B691A5 /* AddPostFormViewController.m in Sources */,
