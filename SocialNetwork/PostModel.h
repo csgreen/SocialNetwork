@@ -17,4 +17,8 @@
 @property (nonatomic) NSString *content;
 @property (nonatomic) NSDate *timeStamp;
 
+- (instancetype)initWithUserName:(NSString *)userName andTitle:(NSString *)title andContent:(NSString *)content andDate:(NSDate *)timeStamp;
+
+- (NSString *)stringFromDate:(NSDate *)incomingDate;
+
 @end

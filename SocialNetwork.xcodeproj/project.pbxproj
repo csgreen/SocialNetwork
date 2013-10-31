@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF880E0A181F67C700B5F504 /* NotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF880E09181F67C700B5F504 /* NotesViewController.m */; };
 		CF99D9071819F1E300B691A5 /* AddPostFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D9061819F1E300B691A5 /* AddPostFormViewController.m */; };
 		CF99D951181F117A00B691A5 /* EditPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF99D950181F117A00B691A5 /* EditPostViewController.m */; };
 		CFC6A3E518162CB70084FC24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC6A3E418162CB70084FC24 /* Foundation.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF880E08181F67C700B5F504 /* NotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotesViewController.h; sourceTree = "<group>"; };
+		CF880E09181F67C700B5F504 /* NotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotesViewController.m; sourceTree = "<group>"; };
 		CF99D9051819F1E300B691A5 /* AddPostFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPostFormViewController.h; sourceTree = "<group>"; };
 		CF99D9061819F1E300B691A5 /* AddPostFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPostFormViewController.m; sourceTree = "<group>"; };
 		CF99D94F181F117A00B691A5 /* EditPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPostViewController.h; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				CFC6A3F618162CB70084FC24 /* Main.storyboard */,
 				CF99D94F181F117A00B691A5 /* EditPostViewController.h */,
 				CF99D950181F117A00B691A5 /* EditPostViewController.m */,
+				CF880E08181F67C700B5F504 /* NotesViewController.h */,
+				CF880E09181F67C700B5F504 /* NotesViewController.m */,
 				CFC6A41918162DDD0084FC24 /* PostModel.h */,
 				CFC6A41A18162DDD0084FC24 /* PostModel.m */,
 				CFC6A3FC18162CB70084FC24 /* Images.xcassets */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF880E0A181F67C700B5F504 /* NotesViewController.m in Sources */,
 				CF99D951181F117A00B691A5 /* EditPostViewController.m in Sources */,
 				CFC6A3F518162CB70084FC24 /* CSGAppDelegate.m in Sources */,
 				CFC6A41B18162DDD0084FC24 /* PostModel.m in Sources */,

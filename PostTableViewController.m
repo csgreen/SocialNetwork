@@ -28,6 +28,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+   //added in class oct 28th
+  //  _posts = [[NSMutableArray alloc] init];
+    
 
     PostModel *post = [[PostModel alloc] init];
     post.userName   = @"Christina";
@@ -91,6 +95,8 @@
     
     _posts = [NSMutableArray arrayWithObjects: post, post1, post2, post3, post4, post5, post6, post7, post8, post9, nil];
     
+    [self.tableView reloadData];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -127,13 +133,17 @@
     
     static NSString *reuseIdentifier = @"Cell";
     PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+   
+    // could do instead
+    // [cell setLabelValuesWithPost:_posts[indexPath.row]]; instead of next 8lines
     
+ // check these lines
     NSDate *postDate = [_posts[indexPath.row] timeStamp];
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateStyle:NSDateFormatterShortStyle];
     NSString *dateString = [dateFormat stringFromDate:postDate];
     
-    
+ 
     
     cell.userName.text = [_posts[indexPath.row] userName];
     cell.title.text = [_posts[indexPath.row] title];
@@ -143,6 +153,17 @@
     
     
     return cell;
+}
+
+//class oct 28th
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if(segue.identifier isEqualToString:@"EditPostSegue")
+    EditPostViewController *editVC = segue.destinationViewController;
+   NSInteger selectedRow = [[self.tableView indexPathForSelectedRow] row];
+    editVC.post = _posts[selectedRow];
+}
 }
 
 /*

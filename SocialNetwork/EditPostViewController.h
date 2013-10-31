@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PostModel.h"
 
 @interface EditPostViewController : UIViewController
+
+@property (nonatomic, weak) PostModel *post;
+
+@property (nonatomic, weak) IBOutlet UITextField *userName
 
 @end

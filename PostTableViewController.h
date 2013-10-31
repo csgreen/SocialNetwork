@@ -12,7 +12,7 @@
 
 @interface PostTableViewController : UITableViewController <UITableViewDataSource>
 
-@property (nonatomic) NSMutableArray *posts;
+@property (nonatomic, strong) NSMutableArray *posts;
 
 //@property (nonatomic, weak) IBOutlet UITableView *tableView;
 

@@ -59,5 +59,30 @@
 
     // Configure the view for the selected state
 }
+// added in class Oct 28th 2013
+
+- (void)setLabelValuesWithPost:(PostModel *)post
+{
+   // self.post = post;
+    _post = post;
+    _userNameLabel.text = _post.userName;
+    _titleLabel.text = _post.title;
+    _contentLabel.text = _post.content;
+    _timeStampLabel.text = dateString;
+}
+-(NSString *)stringFromDate:(NSDate *)incomingDate
+{
+    // date formatter
+}
+
+    
+}
+
+// way to format date
+// NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+// [dateFormatter setDateFormat:@"hh:mm a"];
+// NSString ??????
+//OR can convert date to string with a category
+
 
 @end

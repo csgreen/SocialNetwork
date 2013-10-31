@@ -12,12 +12,14 @@
 
 @interface PostTableViewCell : UITableViewCell
 
-@property (nonatomic, strong) PostModel *post;
+@property (nonatomic, weak) PostModel *post;
 
 @property (nonatomic, strong) IBOutlet UILabel *userName;
 @property (nonatomic, strong) IBOutlet UILabel *title;
 @property (nonatomic, strong) IBOutlet UILabel *content;
 @property (nonatomic) IBOutlet UILabel *timeStamp;
+
+- (void)setLabelValueWithPost
 
 // add IBOutlets to properties to make them tie to storyboard (and get hooks)
 
