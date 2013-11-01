@@ -62,11 +62,22 @@
 //    }];
 //}
 
+- (IBAction)submitPressed:(id)sender;
+{
+    _post.userName = _userNameField.text;
+    _post.title = _titleField.text;
+    _post.content = _contentField.text;
+    _post.timeStamp = [NSDate date];
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+}
+
 @end
 
 //-(IBAction)cancelPressed
 
-//- (IBAction)submitPressed:(id)sender
+
 //{
     
     

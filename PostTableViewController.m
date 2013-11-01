@@ -121,7 +121,7 @@
     [self.tableView reloadData];
 }
 
--(IBAction)addPost
+- (IBAction)submitPressed:(id)sender
 {
     AddPostFormViewController * addPost = [[AddPostFormViewController alloc]initWithNibName:@"Add post" bundle:nil];
     
@@ -214,11 +214,11 @@
     [self presentViewController:editVC animated:YES completion:^{}];
 }
 
-//- (void)reloadTheTable
-//       {
-//           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Good job!" message:@"This means you finished!" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles: nil];
-//           [[alertView] show];
-//       }
+- (void)reloadTheTable
+       {
+           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Good job!" message:@"This means you finished!" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles: nil];
+           [[alertView] show];
+       }
 
 /*
 // Override to support conditional editing of the table view.

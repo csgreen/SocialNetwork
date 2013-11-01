@@ -42,7 +42,7 @@
 @property(nonatomic,weak) id<AddPostFormViewControllerDelegate> delegate;
 
 
-//- (IBAction)submitPressed:(id)sender;
+- (IBAction)submitPressed:(id)sender;
 // -(IBAction)cancelPressed;
 
 
