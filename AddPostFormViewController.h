@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "PostModel.h"
 
-@protocol AddPostDelegate <NSObject>
+@protocol AddPostFormViewControllerDelegate <NSObject>
+
 @required
 
 -(void)addPost:(PostModel *)post;
 
 @end
+
 
 // @property (nonatomic, strong) PostModel *addPost;
 
@@ -28,21 +30,22 @@
 // -(void)timeStampEntered:(NSDate *)timeStamp;
 
 
-@interface AddPostFormViewController : UIViewController {
+@interface AddPostFormViewController : UIViewController
 
-    IBOutlet UITextField *userNameTextField;
-    IBOutlet UITextField *titleTextField;
-    IBOutlet UITextField *contentTextField;
- //   IBOutlet UITextField *timeStamp;
-    
-    
+@property (nonatomic, weak) PostModel *post;
 
-}
+@property (nonatomic, weak) IBOutlet UITextField *userNameTextField;
+@property (nonatomic, weak) IBOutlet UITextField *titleTextField;
+@property (nonatomic, weak) IBOutlet UITextField *contentTextField;
+@property (nonatomic, weak) IBOutlet UITextField *timeStamp;
 
--(IBAction)submitPressed;
+@property(nonatomic,weak) id<AddPostFormViewControllerDelegate> delegate;
+
+
+//- (IBAction)submitPressed:(id)sender;
 // -(IBAction)cancelPressed;
 
-@property(nonatomic,strong) NSObject < AddPostDelegate > *delegate;
+
 
 // - (IBAction)closeModal:(UIButton *)sender {
    // [self dissmissViewControllerAnimated:YES completion:^{

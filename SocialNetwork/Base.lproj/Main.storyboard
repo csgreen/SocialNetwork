@@ -17,7 +17,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ebd-zk-Baa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633" y="-29"/>
+            <point key="canvasLocation" x="-525" y="-29"/>
         </scene>
         <!--Post Table View Controller-->
         <scene sceneID="3fE-ye-PvY">
@@ -101,7 +101,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iuc-bv-bdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="-29"/>
+            <point key="canvasLocation" x="-112" y="-173"/>
         </scene>
         <!--Add Post Form View Controller-->
         <scene sceneID="hNa-T4-J9Z">
@@ -177,6 +177,7 @@
                                 </state>
                                 <connections>
                                     <action selector="submitPressed" destination="BRc-HJ-ki8" eventType="touchUpInside" id="yaa-yB-d6T"/>
+                                    <action selector="submitPressed:" destination="BRc-HJ-ki8" eventType="touchUpInside" id="0vf-wR-abu"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -267,12 +268,20 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="savePost:" destination="Obo-jn-Y20" eventType="touchUpInside" id="rTX-om-HB3"/>
+                                    <action selector="submitPost:" destination="Obo-jn-Y20" eventType="touchUpInside" id="reK-AP-FXO"/>
                                     <action selector="submitPressed" destination="BRc-HJ-ki8" eventType="touchUpInside" id="fDS-7m-2U7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="contentField" destination="DCe-Ct-EiS" id="ZNX-Ev-NVj"/>
+                        <outlet property="timeStampField" destination="eJ9-Xd-UZC" id="IEE-Sf-r74"/>
+                        <outlet property="titleField" destination="Gsm-Xw-eYe" id="vBc-1Q-QOD"/>
+                        <outlet property="userNameField" destination="i6h-nC-jhE" id="Zop-k7-4gW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PzX-jF-KNG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

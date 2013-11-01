@@ -8,48 +8,18 @@
 
 #import "PostTableViewCell.h"
 
-@interface PostTableViewCell (SubviewFrames)
-- (CGRect)_userNameFrame;
-- (CGRect)_titleFrame;
-- (CGRect)_contentFrame;
-- (CGRect)_timeStampFrame;
-@end
-
-
 
 @implementation PostTableViewCell
 
-@synthesize post, userName, title, content, timeStamp;
+// @synthesize post, userName, title, content, timeStamp;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
         
-        userName = [[UILabel alloc] initWithFrame:CGRectZero];
-        [userName setFont:[UIFont systemFontOfSize:12.0]];
-        [userName setTextColor:[UIColor darkGrayColor]];
-        [userName setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:userName];
-        
-        title = [[UILabel alloc] initWithFrame:CGRectZero];
-        [title setFont:[UIFont systemFontOfSize:12.0]];
-        [title setTextColor:[UIColor blackColor]];
-        [title setHighlightedTextColor:[UIColor whiteColor]];
-	    [self.contentView addSubview:title];
-        
-        content = [[UILabel alloc] initWithFrame:CGRectZero];
-        [content setFont:[UIFont boldSystemFontOfSize:14.0]];
-        [content setTextColor:[UIColor blackColor]];
-        [content setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:content];
-        
-        timeStamp = [[UILabel alloc] initWithFrame:CGRectZero];
-        [timeStamp setFont:[UIFont boldSystemFontOfSize:14.0]];
-        [timeStamp setTextColor:[UIColor blackColor]];
-        [timeStamp setHighlightedTextColor:[UIColor whiteColor]];
-        [self.contentView addSubview:timeStamp];
     }
-
+    
     return self;
 }
 
@@ -65,18 +35,15 @@
 {
    // self.post = post;
     _post = post;
-    _userNameLabel.text = _post.userName;
-    _titleLabel.text = _post.title;
-    _contentLabel.text = _post.content;
-    _timeStampLabel.text = dateString;
-}
--(NSString *)stringFromDate:(NSDate *)incomingDate
-{
-    // date formatter
+    _userName.text = _post.userName;
+    _title.text = _post.title;
+    _content.text = _post.content;
+    _timeStamp.text = [_post stringFromDate:_post.timeStamp];
 }
 
+
     
-}
+
 
 // way to format date
 // NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

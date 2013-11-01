@@ -7,12 +7,20 @@
 //
 
 #import "PostTableViewController.h"
+#import "EditPostViewController.h"
+#import "AddPostFormViewController.h"
 
-@interface PostTableViewController ()
-
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@interface PostTableViewController () <EditPostViewControllerDelegate>
 
 @end
+
+@interface PostTableViewController () <AddPostFormViewControllerDelegate>
+
+@end
+
+//@property (nonatomic, weak) IBOutlet UITableView *tableView;
+
+//@end
 
 @implementation PostTableViewController
 
@@ -30,9 +38,9 @@
     [super viewDidLoad];
     
    //added in class oct 28th
-  //  _posts = [[NSMutableArray alloc] init];
+    _posts = [[NSMutableArray alloc] init];
     
-
+   //why can't we do this?
     PostModel *post = [[PostModel alloc] init];
     post.userName   = @"Christina";
     post.title = @"Day 1";
@@ -93,16 +101,41 @@
     post9.content = @"Final project - done!";
     post9.timeStamp = [NSDate date];
     
-    _posts = [NSMutableArray arrayWithObjects: post, post1, post2, post3, post4, post5, post6, post7, post8, post9, nil];
+    [_posts addObject:post];
+    [_posts addObject:post1];
+      [_posts addObject:post2];
+       [_posts addObject:post3];
+        [_posts addObject:post4];
+         [_posts addObject:post5];
+          [_posts addObject:post6];
+           [_posts addObject:post7];
+            [_posts addObject:post8];
+             [_posts addObject:post9];
+     
+}
+              
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:TRUE];
     
     [self.tableView reloadData];
+}
+
+-(IBAction)addPost
+{
+    AddPostFormViewController * addPost = [[AddPostFormViewController alloc]initWithNibName:@"Add post" bundle:nil];
     
+    //important to set the viewcontroller's delegate to be self
+    addPost.delegate = self;
+    
+}
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -131,24 +164,27 @@
 
     
     
-    static NSString *reuseIdentifier = @"Cell";
-    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
    
     // could do instead
-    // [cell setLabelValuesWithPost:_posts[indexPath.row]]; instead of next 8lines
+    
+    [cell setLabelValuesWithPost:_posts[indexPath.row]];
+    
+    //instead of next 8lines
     
  // check these lines
-    NSDate *postDate = [_posts[indexPath.row] timeStamp];
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateStyle:NSDateFormatterShortStyle];
-    NSString *dateString = [dateFormat stringFromDate:postDate];
+   // NSDate *postDate = [_posts[indexPath.row] timeStamp];
+ //   NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+   // [dateFormat setDateStyle:NSDateFormatterShortStyle];
+   // NSString *dateString = [dateFormat stringFromDate:postDate];
     
  
     
-    cell.userName.text = [_posts[indexPath.row] userName];
-    cell.title.text = [_posts[indexPath.row] title];
-    cell.content.text = [_posts[indexPath.row] content];
-    cell.timeStamp.text = dateString;
+    //cell.userName.text = [_posts[indexPath.row] userName];
+    //cell.title.text = [_posts[indexPath.row] title];
+    //cell.content.text = [_posts[indexPath.row] content];
+    //cell.timeStamp.text = dateString;
     
     
     
@@ -157,14 +193,32 @@
 
 //class oct 28th
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)prepareForSegue:(UIStoryboardSegue *)segue
+                 sender:(id)sender
 {
-    if(segue.identifier isEqualToString:@"EditPostSegue")
-    EditPostViewController *editVC = segue.destinationViewController;
-   NSInteger selectedRow = [[self.tableView indexPathForSelectedRow] row];
-    editVC.post = _posts[selectedRow];
+    if([segue.identifier isEqualToString:@"EditPostSegue"])
+    {
+        EditPostViewController *editVC = segue.destinationViewController;
+        NSInteger selectedRow = [[self.tableView indexPathForSelectedRow] row];
+        editVC.post = _posts[selectedRow];
+    }
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+        EditPostViewController *editVC = [[EditPostViewController alloc] initWithNibName:@"EditPostViewController" bundle:nil];
+        editVC.delegate = self;
+        editVC.view.frame = CGRectMake(0.f, 0.f, 320.f, 204.f);
+        editVC.post = _posts[indexPath.row];
+        
+    [self presentViewController:editVC animated:YES completion:^{}];
 }
+
+//- (void)reloadTheTable
+//       {
+//           UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Good job!" message:@"This means you finished!" delegate:nil cancelButtonTitle:@"cancel" otherButtonTitles: nil];
+//           [[alertView] show];
+//       }
 
 /*
 // Override to support conditional editing of the table view.

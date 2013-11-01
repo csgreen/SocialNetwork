@@ -33,7 +33,7 @@
 {
     [super viewWillAppear:animated];
     _userNameField.text = _post.userName;
-    _titlefield.text = _post.title;
+    _titleField.text = _post.title;
     _contentField.text = _post.content;
    // _timeStampField.text = [_post stringFromDate:_post ?????]
     
@@ -48,7 +48,7 @@
 - (IBAction)submitPost:(id)sender
 {
     _post.userName = _userNameField.text;
-    _post.title _titleField.text;
+    _post.title = _titleField.text;
     _post.content = _contentField.text;
     _post.timeStamp = [NSDate date];
     

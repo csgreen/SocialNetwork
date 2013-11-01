@@ -19,8 +19,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *content;
 @property (nonatomic) IBOutlet UILabel *timeStamp;
 
-- (void)setLabelValueWithPost
-
+- (void)setLabelValuesWithPost:(PostModel *)post;
 // add IBOutlets to properties to make them tie to storyboard (and get hooks)
 
 

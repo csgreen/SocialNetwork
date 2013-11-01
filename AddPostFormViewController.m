@@ -31,13 +31,13 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    userNameTextField.text = @"";
-    titleTextField.text = @"";
-    contentTextField.text = @"";
-  //  timeStampTextField.text = @"";
-    [userNameTextField becomeFirstResponder];
-    [titleTextField becomeFirstResponder];
-    [contentTextField becomeFirstResponder];
+    _userNameTextField.text = @"";
+    _titleTextField.text = @"";
+    _contentTextField.text = @"";
+   // timeStampTextField.text = [_post stringFromDate:_post.timeStamp];
+    [_userNameTextField becomeFirstResponder];
+    [_titleTextField becomeFirstResponder];
+    [_contentTextField becomeFirstResponder];
  //   [timeStampTextField becomeFirstResponder];
 }
 
@@ -47,23 +47,40 @@
     // Dispose of any resources that can be recreated.
 }
 
+//- (IBAction)submitPressed:(id)sender
+//{
+//    _post.userName = userNameTextField.text;
+//    _post.title = titleTextField.text;
+//    _post.content = contentTextField.text;
+//    _post.timeStamp = [NSDate date];
+//    
+//   
+//    [self dismissViewControllerAnimated:YES completion:^{
+//        if ([self.delegate respondsToSelector:@selector(reloadTheTable)]) {
+//            [self.delegate reloadTheTable];
+//        }
+//    }];
+//}
+
+@end
+
 //-(IBAction)cancelPressed
 
--(IBAction)submitPressed
-{
+//- (IBAction)submitPressed:(id)sender
+//{
     
     
-        [delegate addPostEntered:addPost
+   //     [delegate addPostEntered:addPost
          
         // [delegate userNameEntered:userNameTextField.text];
         // [delegate titleEntered:titleTextField.text];
         // [delegate contentEntered:contentTextField.text];
         // [delegate timeStampEntered:[timeStampTextField.text intValue]];
-    }
+//}
     
   
-}
+
 // - (IBAction)closeModal:(UIButton *)sender {
 // [self dissmissViewControllerAnimated:YES completion:^{
 //   NSLog(@“Modal Dismissed”);
-@end
+

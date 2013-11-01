@@ -10,7 +10,7 @@
 #import "PostModel.h"
 #import "PostTableViewCell.h"
 
-@interface PostTableViewController : UITableViewController <UITableViewDataSource>
+@interface PostTableViewController : UITableViewController 
 
 @property (nonatomic, strong) NSMutableArray *posts;
 
